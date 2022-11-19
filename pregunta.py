@@ -45,7 +45,7 @@ def ingest_data():
             clusters.append(int(values.pop(0).strip()))
             cantPalabras.append(int(values.pop(0).strip()))
             porcPalabras.append(float(values.pop(0)[:-2].strip().replace(",", ".")))
-        values = [i.strip() for i in values]
+        values = [i.strip().replace(".", "") for i in values]
         palabras.append(" ".join(values))
         parrafo += 1
     data = {
